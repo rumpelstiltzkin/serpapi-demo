@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.anandganesh.code.example</groupId>
-    <artifactId>serpapi-demo</artifactId>
+    <artifactId>serpapi4j-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
