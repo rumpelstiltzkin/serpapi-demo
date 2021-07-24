@@ -1,22 +1,30 @@
-import com.serpapi.client.SerpApiAsyncClient;
-import com.serpapi.client.SerpApiAsyncRestClient;
+package com.anandganesh.code.example.services;
+
 import com.serpapi.client.SerpApiSyncClient;
 import com.serpapi.exceptions.SerpApiException;
 import com.serpapi.model.responses.LocationsResponse;
+import jakarta.annotation.PreDestroy;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
 /**
  * Created by:
  * User: Anand Ganesh
- * Date: 7/22/21
- * Time: 10:31 PM
+ * Date: 7/24/21
+ * Time: 11:52 AM
  */
-public class SerpApiInitializer {
-    public static void main(String[] args) throws SerpApiException, IOException {
-        SerpApiSyncClient serpApiSyncClient = new SerpApiSyncClient();
+@Service
+public class MyService {
+    private final SerpApiSyncClient serpApiSyncClient = new SerpApiSyncClient();
+
+    public MyService() throws SerpApiException {
         LocationsResponse locationsResponse = serpApiSyncClient.locations("San Jose", 10);
         System.out.println(locationsResponse.getJsonArray().toString());
+    }
+
+    @PreDestroy
+    public void preDestroy() throws IOException {
         serpApiSyncClient.close();
     }
 }
