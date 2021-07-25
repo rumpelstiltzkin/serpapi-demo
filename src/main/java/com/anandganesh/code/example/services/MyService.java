@@ -3,9 +3,9 @@ package com.anandganesh.code.example.services;
 import com.serpapi.client.SerpApiSyncClient;
 import com.serpapi.exceptions.SerpApiException;
 import com.serpapi.model.responses.LocationsResponse;
-import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PreDestroy;
 import java.io.IOException;
 
 /**
