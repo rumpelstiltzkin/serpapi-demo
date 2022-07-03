@@ -7,11 +7,12 @@
     <groupId>com.anandganesh.code.example</groupId>
     <artifactId>serpapi4j-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
-            <groupId>com.serpapi</groupId>
+            <groupId>com.anandganesh.code</groupId>
             <artifactId>serpapi4j</artifactId>
-            <version>2.0.2-SNAPSHOT</version>
+            <version>2.0.5</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
